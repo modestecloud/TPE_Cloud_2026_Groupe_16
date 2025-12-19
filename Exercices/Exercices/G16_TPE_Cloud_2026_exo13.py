@@ -1,0 +1,18 @@
+# Exercice 13 : Décalage circulaire d'une liste
+# Groupe 16 - TPE Cloud Computing 2026
+
+def decalage_liste(liste, k):
+    """
+    Cette fonction décale une liste de k positions vers la droite
+    de manière circulaire.
+    """
+    n = len(liste)
+    k = k % n
+    return liste[-k:] + liste[:-k]
+
+# Programme principal
+liste = [1, 2, 3, 4, 5]
+k = 2
+
+print("Liste initiale :", liste)
+print("Liste après décalage de", k, "positions :", decalage_liste(liste, k))
