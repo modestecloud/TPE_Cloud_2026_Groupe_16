@@ -1,0 +1,29 @@
+# TPE Cloud Computing 2026
+
+## Nom du groupe
+Groupe 16
+
+## Membres du groupe
+1- DJERANE MODESTE 18A803FS
+2- MBAIHAM NEHEMIE 22A952fs
+3- Dimougna Clément, 22B197FS
+4- DA'AYANG LANDRY 22b442fs
+5- EKANGO EWE EDOUARD GASPARD 22B831FS
+
+## Répartition des tâches
+- Membre 1 : Exercice 13 – Décalage de liste
+- Membre 2 : Exercice 14 – Fréquence des mots
+- Membre 3 : Exercice 17 – Simulation de Monte Carlo
+- Membre 4 : Aide à la rédaction du README
+- Membre 5 : Vérification et tests du code
+
+---
+
+## Exercice 13 : Décalage d'une liste
+Le programme permet de décaler les éléments d'une liste vers la droite et vers la gauche de manière circulaire.
+
+## Exercice 14 : Fréquence des mots
+Ce programme analyse un texte et calcule la fréquence d'apparition des mots sans tenir compte de la casse ni de la ponctuation.
+
+## Exercice 17 : Estimation de Pi
+La méthode de Monte Carlo est utilisée pour estimer la valeur de π à partir de points générés aléatoirement.
