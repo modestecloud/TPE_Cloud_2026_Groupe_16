@@ -9,6 +9,7 @@ Groupe 16
 3- Dimougna Clément, 22B197FS
 4- DA'AYANG LANDRY 22b442fs
 5- EKANGO EWE EDOUARD GASPARD 22B831FS
+6- NADIA KIRO MANGA TAMANDA 22A787FS
 
 ## Répartition des tâches
 - Membre 1 : Exercice 13 – Décalage de liste
@@ -16,14 +17,98 @@ Groupe 16
 - Membre 3 : Exercice 17 – Simulation de Monte Carlo
 - Membre 4 : Aide à la rédaction du README
 - Membre 5 : Vérification et tests du code
-
+- - NADIA : Relecture finale, corrections et synthèse du projet
 ---
 
 ## Exercice 13 : Décalage d'une liste
+# Exercice 13 : Décalage circulaire d'une liste
+# Groupe 16 - TPE Cloud Computing 2026
+
+def decalage_liste(liste, k):
+    """
+    Cette fonction décale une liste de k positions vers la droite
+    de manière circulaire.
+    """
+    n = len(liste)
+    k = k % n  # pour éviter les erreurs si k > taille de la liste
+    return liste[-k:] + liste[:-k]
+
+
+# Programme principal
+liste = [1, 2, 3, 4, 5]
+k = 2
+
+print("Liste initiale :", liste)
+print("Liste après décalage de", k, "positions :", decalage_liste(liste, k))
 Le programme permet de décaler les éléments d'une liste vers la droite et vers la gauche de manière circulaire.
 
 ## Exercice 14 : Fréquence des mots
+
+# Exercice 14 : Calcul de la fréquence des mots
+# Groupe 16 - TPE Cloud Computing 2026
+
+import string
+
+def frequence_mots(texte):
+    """
+    Cette fonction calcule la fréquence des mots dans un texte
+    sans tenir compte de la casse ni de la ponctuation.
+    """
+    # Conversion en minuscules
+    texte = texte.lower()
+
+    # Suppression de la ponctuation
+    for caractere in string.punctuation:
+        texte = texte.replace(caractere, "")
+
+    mots = texte.split()
+    frequences = {}
+
+    for mot in mots:
+        if mot in frequences:
+            frequences[mot] += 1
+        else:
+            frequences[mot] = 1
+
+    return frequences
+
+
+# Programme principal
+texte = "Le Cloud computing est le futur du Cloud et du computing."
+resultat = frequence_mots(texte)
+
+print("Fréquence des mots :")
+print(resultat)
 Ce programme analyse un texte et calcule la fréquence d'apparition des mots sans tenir compte de la casse ni de la ponctuation.
 
 ## Exercice 17 : Estimation de Pi
+
+# Exercice 17 : Estimation de Pi par la méthode de Monte Carlo
+# Groupe 16 - TPE Cloud Computing 2026
+
+import random
+
+def estimation_pi(n):
+    """
+    Cette fonction estime la valeur de Pi
+    en utilisant la méthode de Monte Carlo.
+    """
+    points_dans_cercle = 0
+
+    for _ in range(n):
+        x = random.random()
+        y = random.random()
+
+        if x**2 + y**2 <= 1:
+            points_dans_cercle += 1
+
+    pi_estime = 4 * points_dans_cercle / n
+    return pi_estime
+
+
+# Programme principal
+nombre_points = 100000
+pi = estimation_pi(nombre_points)
+
+print("Valeur estimée de Pi :", pi)
 La méthode de Monte Carlo est utilisée pour estimer la valeur de π à partir de points générés aléatoirement.
